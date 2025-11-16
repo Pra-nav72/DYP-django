@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Python{% endblock title %}
+
+{% block css_link %}
+    {{block.super}}
+    <link rel="stylesheet" href="{% static "course/css/python.css" %}">
+{% endblock css_link %}
+
+{% block content %}
+    <h1>This is python.</h1>
+{% endblock content %}
+
+
+{% comment %} <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <link rel="stylesheet" href="{% static 'course/css/python.css' %}">
+</head>
+<body>
+    
+</body>
+</html> {% endcomment %}

@@ -1,0 +1,36 @@
+1. create container folder (mkdir) project_name
+    go inside it --> cd project_name
+2. add venv --> python -m venv .venv
+3. activate venv --> .venv/scripts/activate
+    issue? ==> 
+4. pip install django
+5. create project --> django-admin startproject PROJECT_NAME .
+    ==> . is used for not creating inner folder with same project_name
+6. create Apps --> python manage.py startapp APP_NAME
+    ==> each app is complete module in itself i.e. it can be used in other projects too.
+7. install Apps --> go to settings.p, add APP_NAME in INSTALLED_APPS[]
+8. create urls.py file inside APP_NAME
+9. create templates/APP_NAME folder inside APP_NAME --> stores .HTML files
+10. create static folder inside APP_NAME --> stores .css & .js
+11. run project --> python manage.py runserver
+
+----------connect APP urls to project's urls----------------
+in app urls-->from APP_NAME.views import FUNCTION_NAME
+in the projects's urls.py add --> from django.urls import path, include 
+                ---> urlpatterns = [
+                            path('admin/', admin.site.urls),
+                            path('Route/', include('APP_NAME.urls'))
+                        ]
+
+
+-----------------------templates inheritance----------------
+1.create an APP core   --> base.HTML & home.HTML 
+2. write the common codes of  HTML in base file.
+    & wherever you think different files can write different codes there create block:
+    --> {%  block BLOCK_NAME %}  {% endblock BLOCK_NAME %}
+    whatever written in-between the block in child templates gets executed
+    ===> in child templates e.g home.HTML extends parent templates
+    --> {% extends 'parent_template path' %} 
+    ---> {%  block BLOCK_NAME %} THIS IS CHILD {% endblock BLOCK_NAME %}
+
+

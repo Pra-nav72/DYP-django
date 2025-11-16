@@ -1,0 +1,31 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+
+{% block title %}Django{% endblock title %}
+
+{% block css_link %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'course/css/django.css' %}">
+{% endblock css_link %}
+
+
+{% block content %}
+    <h1>This is Django</h1>
+{% endblock content %}
+
+
+
+{% comment %} <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+    <link rel="stylesheet" href="{% static "course/css/django.css" %}">
+</head>
+<body>
+    
+</body>
+</html> {% endcomment %}

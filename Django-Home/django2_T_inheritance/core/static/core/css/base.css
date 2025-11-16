@@ -1,0 +1,28 @@
+ul{
+    
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+    list-style-type: none;
+    gap: 2rem;
+    
+}
+header{
+    background-color: burlywood;
+    margin: 0;
+    padding: 0.8rem;
+}
+a{
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: large;
+}
+li a:hover{
+    transform: scale(1.03);
+    margin: 0;
+    background-color: rgb(176, 181, 250);
+    border-left: 1.7px solid rgb(0, 0, 0);
+    border-bottom: 1.7px solid rgb(0, 0, 0);
+    border-radius: 2px;
+}
