@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model learning</title>
+</head>
+<body>
+    <h1>Students data</h1>
+   
+    <h2>
+        {% for Student in rec %}
+        {{Student.name}} - {{Student.email}} <hr>
+           age: {{Student.age}} - Id: {{Student.id}} <hr>
+            city: {{Student.city}} 
+        {% endfor %}
+    </h2>
+
+    <hr><hr>
+    <h2>
+        {% if rgd %}
+        name: {{rgd.name}} -- email: {{rgd.email}}
+        {% endif %}
+    </h2>
+</body>
+</html>
